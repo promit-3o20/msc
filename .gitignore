@@ -1,0 +1,95 @@
+# Node.js
+node_modules/
+npm-debug.log
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.egg
+*.pyd
+*.pyo
+*.pyd
+
+# Java
+*.class
+*.jar
+*.war
+*.ear
+
+# Logs
+logs/
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Build directories
+dist/
+build/
+out/
+
+# IDEs
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Dependency directories
+vendor/
+composer.lock
+
+# Environment variables
+.env
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+
+# Archive files
+*.zip
+*.tar.gz
+*.rar
+
+# macOS
+._*
+.Spotlight-V100
+.Trashes
+
+# LaTeX
+*.aux
+*.bbl
+*.blg
+*.brf
+*.fls
+*.fdb_latexmk
+*.ilg
+*.ind
+*.idx
+*.lof
+*.log
+*.lot
+*.out
+*.toc
+*.synctex.gz
+*.run.xml
+*.bcf
+
+# PDF files
+# *.pdf
+
+# Backup files
+*~
+*.bak
+*.backup
+
+# Thumbnails
+*.dvi
+*.ps
+*.eps
+*.synctex(busy)
