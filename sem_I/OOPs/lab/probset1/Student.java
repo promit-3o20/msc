@@ -5,18 +5,16 @@ public class Student {
 
     //global variables
     static int counter;
-    static int stuId;
 
     // static block
     static {
         counter = 0;
-        stuId = 0;
     }
     // constractors
 
     // methods
     public static void nextStudentId() {
-        System.out.println("The next student unique ID:" + (stuId + 1));
+        System.out.println("The next available student unique ID:" + (counter + 1));
     }
 
     public static void studentAdmission() {
@@ -31,7 +29,10 @@ public class Student {
             System.out.println("Student admitted successfully.");
             counter++;
         }
-        System.out.println("Student's unique ID:" + counter);
+        System.out.println("Students admitted:" + counter);
+        for (int i = 1; i <= counter; i++) {
+            System.out.println("Student's unique ID: " + i);
+        }
         nextStudentId();
     }
 
