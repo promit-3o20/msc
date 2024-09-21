@@ -10,22 +10,24 @@ public class WebsiteVisitor {
     public static void website() {
         System.out.println("Website visited!");
     }
-    public static void websiteTracker(){
-         while (true) {
+
+    public static void websiteTracker() {
+        while (true) {
             System.out.println("Want to visit the website? [y/n] ");
             Scanner sc = new Scanner(System.in);
             String c = sc.nextLine();
-            
-            if(c.equals("n")== true){
+
+            if (c.equals("n") == true) {
                 break;
             }
             website();
-            counter ++;
+            counter++;
         }
         System.out.println("Website visitor traker:" + counter);
     }
+
     public static void main(String[] args) {
 
-       websiteTracker();
+        websiteTracker();
     }
 }
