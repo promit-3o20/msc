@@ -1,0 +1,26 @@
+# Ignore the .myenvIP folder
+.myenvIP/
+
+# Ignore common Python virtual environment folders
+.venv/
+env/
+venv/
+
+# Ignore compiled Python files
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore logs and temporary files
+*.log
+*.tmp
+*.swp
+
