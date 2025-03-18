@@ -1,0 +1,22 @@
+# Ignore Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore virtual environment
+venv/
+.myenv/
+
+# Ignore compiled files
+*.o
+*.so
+*.a
+
+# Ignore log files
+*.log
+
+# Ignore VS Code and JetBrains settings
+.vscode/
+.idea/
+
