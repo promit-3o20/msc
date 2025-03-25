@@ -2,7 +2,7 @@ class MySort:
     ''' This class containing various sorting algorithms.'''
 
     @staticmethod
-    def myBubbleSort(arr):
+    def my_bubblesort(arr):
         n = len(arr)
         for i in range(n):
             swapped = False
@@ -15,26 +15,35 @@ class MySort:
         return arr
 
     @staticmethod
-    def myQuickSort(arr):
-        if len(arr) <= 1:
-            return arr
-        pivot = arr[len(arr) // 2]
-        left = [x for x in arr if x < pivot]
-        right = [x for x in arr if x >pivot]
-        middle = [x for x in arr if x == pivot]
-        return MySort.myQuickSort(left) + middle + MySort.myQuickSort(right)
+    def my_quicksort(arr, low, high):
+        if low < high:
+            pi = MySort._my_partition(arr, low, high)
+            MySort.my_quicksort(arr, low, pi-1)
+            MySort.my_quicksort(arr, pi+1, high)
 
     @staticmethod
-    def myMergeSort(arr):
+    def _my_partition(arr, low, high):
+        pivot = arr[high]
+        i = low - 1
+
+        for j in range (low, high):
+            if arr[j] < pivot:
+                i += 1
+                arr[i], arr[j] = arr[j], arr[i]
+        arr[i + 1], arr[high] = arr[high], arr[i + 1]
+        return i + 1
+
+    @staticmethod
+    def my_mergesort(arr):
         if len(arr) <= 1:
             return arr
         mid = len(arr) // 2
-        left = MySort.myMergeSort(arr[:mid])
-        right = MySort.myMergeSort(arr[mid:])
-        return MySort.my_merge(left, right)
+        left = MySort.my_mergesort(arr[:mid])
+        right = MySort.my_mergesort(arr[mid:])
+        return MySort._my_merge(left, right)
     
     @staticmethod
-    def my_merge(left, right):
+    def _my_merge(left, right):
         result = []
         i = j = 0
         while i < len(left) and j < len(right):

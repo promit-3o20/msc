@@ -8,9 +8,9 @@ def main():
 
             # Sorting options
             sort_methods = {
-                "1": ("Bubble Sort", MySort.myBubbleSort),
-                "2": ("Merge Sort", MySort.myMergeSort),
-                "3": ("Quick Sort", MySort.myQuickSort),
+                "1": ("Bubble Sort", MySort.my_bubblesort),
+                "2": ("Merge Sort", MySort.my_mergesort),
+                "3": ("Quick Sort", MySort.my_quicksort),
                 "0": ("Exit", None)
             }
 

@@ -7,13 +7,14 @@ class TestMySort(unittest.TestCase):
         self.sorted_arr = [11, 12, 22, 25, 64]
 
     def test_bubble_sort(self):
-        self.assertEqual(MySort.myBubbleSort(self.arr.copy()), self.sorted_arr)
+        self.assertEqual(MySort.my_bubblesort(self.arr.copy()), self.sorted_arr)
     def test_merge_sort(self):
-        self.assertEqual(MySort.myMergeSort(self.arr.copy()), self.sorted_arr)
+        self.assertEqual(MySort.my_mergesort(self.arr.copy()), self.sorted_arr)
 
-    def test_quick_sort(self):
-        self.assertEqual(MySort.myQuickSort(self.arr.copy()), self.sorted_arr)
-
+    def test_quick_sort(self):                                                                                                   
+        arr_copy = self.arr.copy()  # Copy to avoid modifying original array
+        MySort.my_quicksort(arr_copy, 0, len(arr_copy) - 1)  # In-place QuickSort
+        self.assertEqual(arr_copy, self.sorted_arr)
 '''
     def test_selection_sort(self):
         self.assertEqual(MySort.selection_sort(self.arr.copy()), self.sorted_arr)
