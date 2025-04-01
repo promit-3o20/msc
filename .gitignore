@@ -10,6 +10,7 @@ __pycache__/
 *.pyd
 *.pyo
 *.pyd
+*.pyc
 
 # Java
 *.class
@@ -45,6 +46,15 @@ composer.lock
 
 # Environment variables
 .env
+# Ignore the .myenv folder
+.myenv*/
+# ignore common python virtual environment folders
+.venv/
+env/
+venv/
+
+# ignore jupyter notebook checkpoints
+.ipynb_checkpoints/
 
 # Temporary files
 *.tmp
@@ -93,3 +103,4 @@ composer.lock
 *.ps
 *.eps
 *.synctex(busy)
+
