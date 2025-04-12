@@ -1,13 +1,15 @@
-import random, time
+import random
+import time
 import matplotlib.pyplot as plt
 
-def my_bubble_sort(arr):
-    n = len(arr)
-    for i in range(n):
-        for j in range(0, n-i-1):
-            if arr[j] > arr[j+1]:
-                arr[j], arr[j+1] = arr[j+1], arr[j]
-    return arr
+def insertion_sort(A):
+    for j in range(1, len(A)):
+        key = A[j]
+        i = j - 1
+        while i >= 0 and A[i] > key:
+            A[i + 1] = A[i]
+            i -= 1
+        A[i + 1] = key
 
 def measure_time(sort_func, input_sizes):
     times = []
@@ -30,14 +32,14 @@ def plot_time_complexity(input_sizes, times, algorithm_name):
 def main():
     input_sizes = [100, 500, 1000, 1500, 2000, 3000, 4000, 5000, 6000, 7000]
 
-    bubble_sort_times = measure_time(my_bubble_sort, input_sizes)
-    plot_time_complexity(input_sizes, bubble_sort_times, 'Bubble Sort')
+    insertion_sort_times = measure_time(insertion_sort, input_sizes)
+    plot_time_complexity(input_sizes, insertion_sort_times, 'Insertion Sort')
 
-    n_squared_times = [ (size**2) / 1e7 for size in input_sizes ]
-    plt.plot(input_sizes, n_squared_times, linestyle='--', color='g', label='O(n^2) Reference')
-
+    n_squared_times = [ (size**2) / 1e7 for size in input_sizes ]  
+    plt.plot(input_sizes, n_squared_times, linestyle='--', label='O(n^2)')
     plt.legend()
     plt.show()
 
 if __name__ == "__main__":
     main()
+
