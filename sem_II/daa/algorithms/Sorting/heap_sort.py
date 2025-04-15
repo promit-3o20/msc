@@ -23,7 +23,7 @@ def my_heap_sort(arr):
    n = len(arr)
    build_max_heap(arr)
    for i in range(n - 1, 0, -1):
-       arr[0], arr[i] = arr[i], arr[0]  # swap max to end
+       arr[0], arr[i] = arr[i], arr[0]
        max_heapify(arr, i, 0)   
        
 def measure_time(sort_func, input_sizes):
