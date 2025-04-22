@@ -5,9 +5,6 @@ def counting_sort(arr):
     k = max(arr)
     C = [0] * (k + 1)
 
-    for i in range(0, k + 1):
-        C[i] = 0
-
     for j in range(len(arr)):
         C[arr[j]] += 1
 
